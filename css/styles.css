@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Ubuntu, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+.section-1 {
+    width: 100vw;
+    height: 100vh;
+    gap: 24px;
+    padding: 64px;
+}
+header {
+    display: flex;
+    width: 80vw;
+    height: 0.8vh;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 247px;
+    height: 80px;
+    gap: 8px;
+    padding-right: 32px;
+    padding-left: 32px;
+}
+.logo img {
+    width: 80px;
+    height: 80px;
+}
+.divider {
+    width: 3px;
+    height: 60px;
+    border-radius: 1px;
+    background: var(--Light-Gray, #5a5a5a);
+}
+.paragraph {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+}
+.paragraph p {
+    font-family: Ubuntu;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+.paragraph span {
+    font-family: Ubuntu;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 476px;
+    height: 30px;
+    gap: 80px;
+    padding-right: 32px;
+    padding-left: 32px;
+}
+.menu a {
+    width: 93px;
+    height: 23px;
+    font-family: Ubuntu, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+}
+
+.menu a::after {
+    content: "";
+    width: 50px;
+    height: 3px;
+    border-radius: 1px;
+    background: var(--Primary, #ff3564);
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+}
