@@ -1,97 +1,186 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    font-family: Ubuntu, sans-serif;
-    background-color: #000;
-    color: #fff;
-}
-.section-1 {
-    width: 100vw;
-    height: 100vh;
-    gap: 24px;
-    padding: 64px;
-}
-header {
-    display: flex;
-    width: 80vw;
-    height: 0.8vh;
-    justify-content: space-between;
-    align-items: center;
-}
-.logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 247px;
-    height: 80px;
-    gap: 8px;
-    padding-right: 32px;
-    padding-left: 32px;
-}
-.logo img {
-    width: 80px;
-    height: 80px;
-}
-.divider {
-    width: 3px;
-    height: 60px;
-    border-radius: 1px;
-    background: var(--Light-Gray, #5a5a5a);
-}
-.paragraph {
-    display: flex;
-    flex-direction: column;
-    color: #ffffff;
-}
-.paragraph p {
-    font-family: Ubuntu;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 100%;
-    letter-spacing: 0%;
-}
-.paragraph span {
-    font-family: Ubuntu;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 100%;
-    letter-spacing: 0%;
-}
-.menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 476px;
-    height: 30px;
-    gap: 80px;
-    padding-right: 32px;
-    padding-left: 32px;
-}
-.menu a {
-    width: 93px;
-    height: 23px;
-    font-family: Ubuntu, sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    color: #ffffff;
-    text-align: center;
-    position: relative;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Ubuntu, sans-serif;
 }
 
+body {
+  background-color: #151515;
+  color: #fff;    
+  overflow-x: hidden;
+}
+.section-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100dvw;
+  height: 100dvh;
+  gap: 24px;
+  padding: 64px;
+}
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 32px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 247px;
+  gap: 8px;
+  padding-inline: 32px;
+  
+}
+.logo img {
+  width: 100%;
+}
+.divider-up {
+  width: 3px;
+  height: 60px;
+  border-radius: 1px;
+  background: var(--Light-Gray, #5a5a5a);
+}
+.divider-side {
+  width: 100%;
+  padding: 2px;
+  border-radius: 1px;
+  background: #1f1f1f;
+}
+.paragraph {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+.paragraph p {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+.paragraph span {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+.menu a {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+}
 .menu a::after {
-    content: "";
-    width: 50px;
-    height: 3px;
-    border-radius: 1px;
-    background: var(--Primary, #ff3564);
-    position: absolute;
-    left: 50%;
-    bottom: -5px;
-    transform: translateX(-50%);
+  content: "";
+  width: 50px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--Primary, #ff3564);
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  transform: translateX(-50%);
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  padding: 24px 64px;
+  /* background-color: #0000ff; */
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  width: 100%;
+}
+
+.me{
+  display: flex;
+  flex-direction: column;
+}
+
+.me .greeting {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
+}
+
+.me .job {
+  font-weight: 700;
+  font-size: 128px;
+  line-height: 100%;
+  color: var(--Primary, #ff3564);
+}
+
+.about{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  gap: 24px;
+}
+
+.about .text-about{
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.about .social-media-hero{
+  display: flex;
+  gap: 24px;
+}
+
+.about .social-media-hero button{
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  color: #151515;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 12px;
+  border-radius: 100%;
+  background-color: var(--Primary, #ff3564);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.about .social-media-hero .curriculo{
+  padding-inline: 24px;
+  border-radius: 24px;
+}
+
+.about .social-media-hero button i{
+  font-size: 22px;
+}
+
+.about .social-media-hero button:hover{
+  background-color: rgb(from #ff3564 r g b / 70%);
+}
+
+.logo-hero {
+  position: relative;
+  width: 100%;
+}
+.logo-hero img {
+  position: absolute;
+  right: 8dvw;
+  height: 100%;
 }
